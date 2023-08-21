@@ -118,7 +118,8 @@
             android:id="@+id/btnLimpiar"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:text="@string/btnLimpiar" />
+            android:text="@string/btnLimpiar"
+            android:onClick="clearFields" />
     </TableRow>
 
     <ListView

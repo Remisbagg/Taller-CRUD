@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "checkFields: " + documento);
         return true;
     }
+
     public void registerUser(View view) {
         if (checkFields()) {
             UserDAO userDAO = new UserDAO(this, view);
@@ -82,6 +83,27 @@ public class MainActivity extends AppCompatActivity {
         etApellidos.setText("");
         etContra.setText("");
     }
+    public void clearFields(View view) {
+        clearFields();
+    }
+    public void updateUser(View view) {
+        if (checkFields()) {
+            UserDAO userDAO = new UserDAO(this, view);
+            User user = new User(documento, usuario, nombres, apellidos, contra);
+            userDAO.updateUser(user);
+            userList();
+        }
+    }
+
+    public void deleteUser(View view) {
+        if (checkFields()) {
+            UserDAO userDAO = new UserDAO(this, view);
+            User user = new User(documento, usuario, nombres, apellidos, contra);
+            userDAO.deleteUser(user);
+            userList();
+        }
+    }
+
 
 
 
