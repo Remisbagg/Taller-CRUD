@@ -75,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         ArrayAdapter<User> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, userArrayList);
         listUsers.setAdapter(adapter);
     }
+    private void clearFields() {
+        etDocumento.setText("");
+        etUsuario.setText("");
+        etNombres.setText("");
+        etApellidos.setText("");
+        etContra.setText("");
+    }
+
 
 
 
